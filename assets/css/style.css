@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --medium: #C3C3C3;
+    --primary-color: #4D82A1;
+    --secondary-color: #373B69;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--secondary-color);
+    cursor: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    height: 97vh;
+}
+
+.app {
+    background-color: var(--primary-color);
+    border-radius: 1em;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+    cursor: crosshair;
+    flex-direction: column;
+    gap: 2rem;
+    height: 400px;
+    padding: 20px;
+    width: 400px;
+}
+
+.icns {
+    cursor: pointer;
+    gap: 7em;
+}
+
+h1 {
+    color: var(color-dark);
+    letter-spacing: 3px;
+}
+
+#sum {
+    color: var(color-dark);
+    font-size: 2.9em;
+    font-weight: 700;
+}
+
+button {
+    background-color: transparent;
+    border-radius: .5em;
+    cursor: pointer;
+    font-size: 1em;
+    padding: .7em 1.3em;
+    
+    &:first-child {
+        margin-right: 1.7em;
+        outline: var(--secondary-color) 1px solid;
+    }
+    
+    &:hover {
+        background-color: var(--secondary-color);
+        opacity: .7;
+    }
+}
+
+#incr-btn {
+    background-color: var(--secondary-color);
+    
+    &:hover {
+        opacity: .7;
+        outline: var(--secondary-color) 1px solid;
+    }
+}
+
+p {
+    color: var(color-dark);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+/* Mousemove */
+
+.circle {
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.circle-a {
+    border: var(--medium) 3px dashed;
+    height: 70px;
+    mix-blend-mode: difference;
+    width: 70px;
+}
+
+.circle-b {
+    border: var(--medium) 1px solid;
+    height: 50px;
+    width: 50px;
+}
+
+.circle-c {
+    background-color: var(--medium);
+    height: 9px;
+    mix-blend-mode: multiply;
+    width: 9px;
+}
+
+/* Navbar */
+
+#nav {
+    background-color: var(--primary-color);
+    height: 64px;
+    position: fixed;
+    width: 100vw;
+    z-index: -1;
+    transition: all linear 700ms;
+}
+
+.spacer {
+    height: 700px;
+}
