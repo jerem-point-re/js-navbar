@@ -42,17 +42,13 @@ refr.addEventListener('click', refrCount);
 
 // Mousemove
 
-const circleA = document.querySelector('.circle-a');
-const circleB = document.querySelector('.circle-b');
-const circleC = document.querySelector('.circle-c');
+const circles = document.querySelectorAll('.circle');
 
 window.addEventListener('mousemove', (e) => {
-    circleA.style.top = e.pageY + 'px';
-    circleA.style.left = e.pageX + 'px';
-    circleB.style.top = e.pageY + 'px';
-    circleB.style.left = e.pageX + 'px';
-    circleC.style.top = e.pageY + 'px';
-    circleC.style.left = e.pageX + 'px';
+    circles.forEach((c) => {
+        c.style.top = e.y + "px";
+        c.style.left = e.x + "px";
+    });
 });
 
 // Navbar
@@ -61,7 +57,7 @@ let scrollPos = window.scrollY;
 
 window.addEventListener('scroll', () => {
     const ratio = scrollPos - window.scrollY;
-    
+
     if (ratio < 0) nav.style.opacity = 0;
     else nav.style.opacity = 1;
 
